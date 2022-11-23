@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/magic_list_maker-server -Dhttp.port=$PORT -Dconfig.resource=production.conf -Dlogger.resource=prod-logback.xml

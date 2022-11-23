@@ -1,0 +1,220 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# WARNING - DO NOT CHANGE ROUTES WITHOUT CHECKING REFERENCES IN THE PROJECT AND DATABASE (version revision logs)
+
+# Misc
+GET         /                                                   controllers.MainController.index
+GET         /privacyStatement                                   controllers.MainController.getPrivacyStatement
+GET         /privacystatement                                   controllers.MainController.getPrivacyStatementRedirect
+GET         /terms                                              controllers.MainController.getTermsOfUse
+GET         /comingSoon                                         controllers.MainController.getComingSoon
+
+# User
+GET         /user/create                                        controllers.UserController.getCreateAccountPage
+GET         /user/register                                      controllers.UserController.getRedirectToRegister
+POST        /user/create                                        controllers.UserController.createAccount
+GET         /user/isEmailInUse                                  controllers.UserController.getEmailAlreadyInUse
+POST        /user/isEmailValid                                  controllers.UserController.isEmailValid
+GET         /user/forgotPassword                                controllers.UserController.forgotPassword
+GET         /user/changePassword                                controllers.UserController.changePassword
+GET         /user/resetPassword                                 controllers.UserController.resetPassword
+GET         /user/success                                       controllers.UserController.operationSuccess
+GET         /user/failure                                       controllers.UserController.operationFailure
+GET         /user/login                                         controllers.UserController.getLoginPage
+POST        /user/login                                         controllers.UserController.submitLogin
+GET         /user/profile                                       controllers.UserController.getProfilePage
+GET         /user/sendVerificationEmail                         controllers.UserController.getSendVerificationEmailPage
+POST        /user/sendVerificationEmail                         controllers.UserController.sendVerificationEmail
+GET         /user/verifyEmail                                   controllers.UserController.getVerifyEmailLinkPage
+POST        /user/forgotPassword                                controllers.UserController.submitForgotPassword()
+GET         /user/logout                                        controllers.UserController.logoutFromWebApp
+GET         /user/unsubscribe                                   controllers.UserController.unsubscribeUser
+
+# User API
+POST        /api/user/changePassword                            controllers.UserApiController.changePassword
+POST        /api/user/resetPassword                             controllers.UserApiController.resetPassword
+
+# User Notifications
+GET         /user/notifications                                 controllers.UserNotificationController.getAllNotifications
+GET         /user/notifications/past                            controllers.UserNotificationController.getAllPastNotifications
+POST        /user/notifications/fulfill/:id                     controllers.UserNotificationController.fulfillNotification(id: String)
+POST        /user/notifications/readAll                         controllers.UserNotificationController.readAllNotifications()
+
+# Plans
+GET         /plan/subscription                                  controllers.PlanController.getSubscription
+GET         /plan/cards                                         controllers.PlanController.getCards
+GET         /plan/invoice/mostRecent                            controllers.PlanController.getMostRecentInvoice
+GET         /plan/invoice/all                                   controllers.PlanController.getInvoices
+GET         /plan/invoice/:id                                   controllers.PlanController.getInvoiceById(id: String)
+GET         /plan/addCard                                       controllers.PlanController.addNewCard()
+GET         /coupons/:id                                        controllers.PlanController.getCouponFromId(id: String)
+
+# Plan API
+POST        /api/plan/updateSubscription                        controllers.PlanApiController.updateSubscription()
+POST        /api/plan/cards/add                                 controllers.PlanApiController.addCreditCard()
+POST        /api/plan/cards/delete                              controllers.PlanApiController.deleteCreditCard()
+POST        /api/plan/cards/changeDefault                       controllers.PlanApiController.changeDefaultCreditCard()
+POST        /api/plan/payment/retry                             controllers.PlanApiController.retryPayment()
+
+# Stripe Webhooks
+POST        /stripe/subscription/change                         controllers.StripeWebHookController.onSubscriptionChange()
+
+# Lists
+GET         /lists                                              controllers.ListsController.getLists
+POST        /lists/insert/web                                   controllers.ListsController.insertListFromWeb()
+GET         /lists/upload                                       controllers.ListsController.getUploadNewListPage
+POST        /lists/upload                                       controllers.ListsController.previewNewList
+POST        /api/list/create                                    controllers.ListsController.createListFromPredicates()
+POST        /api/list/comment/edit/:id                          controllers.ListsController.setListComment(id: String)
+POST        /api/list/name/edit/:id                             controllers.ListsController.setListName(id: String)
+POST        /api/list/delete/:id                                controllers.ListsController.deleteList(id: String)
+POST        /api/list/merge                                     controllers.ListsController.mergeLists
+
+# Contacts Search
+GET         /contacts/search                                    controllers.SearchesController.getSearchDetails
+
+# Settings
+GET         /settings                                           controllers.SettingsController.getSettings
+GET         /settings/contactStatuses                           controllers.SettingsController.getContactStatuses
+
+# People
+GET         /person/migrations                                  controllers.PersonController.getPeopleForMigration
+GET         /person/:id                                         controllers.PersonController.getPersonById(id: String)
+POST        /person/notes/edit/:id                              controllers.PersonController.setPersonNotes(id: String)
+POST        /person/state/edit/:id                              controllers.PersonController.setPersonState(id: String)
+POST        /person/state/edit/saveTime/:id                     controllers.PersonController.updatePastPersonState(id: String)
+POST        /person/update/:id                                  controllers.PersonController.updatePerson(id: String)
+POST        /person/migrate/:id                                 controllers.PersonController.migratePastPersonState(id: String)
+POST        /person/create                                      controllers.PersonController.createPerson()
+POST        /person/delete/:id                                  controllers.PersonController.deletePerson(id: String)
+
+# Notification
+POST        /notification/create                                controllers.NotificationsController.createNotification()
+POST        /notification/delete/:id                            controllers.NotificationsController.deleteNotification(id: String)
+POST        /notification/edit/:id                              controllers.NotificationsController.editNotification(id: String)
+POST        /notification/updateStatus/:id                      controllers.NotificationsController.updateNotificationStatus(id: String)
+POST        /notification/archive/batch                         controllers.NotificationsController.batchArchiveNotification()
+POST        /notification/archive/:id                           controllers.NotificationsController.archiveNotification(id: String)
+POST        /notification/unarchive/:id                         controllers.NotificationsController.unarchiveNotification(id: String)
+GET         /notification                                       controllers.NotificationsController.getNotificationsPage
+GET         /notification/today                                 controllers.NotificationsController.getNotificationsForTodayPage
+GET         /notification/today.json                            controllers.NotificationsController.getNotificationsForToday
+GET         /notification/past                                  controllers.NotificationsController.getPastNotifications
+GET         /notification/current                               controllers.NotificationsController.getCurrentNotifications
+GET         /notification/current/completed                     controllers.NotificationsController.getCompletedAndUnarchivedNotifications
+GET         /notification/upcoming                              controllers.NotificationsController.getUpcomingNotifications
+
+# Dial Sheets
+GET         /dialsheet                                          controllers.DialSheetController.getPastDialSheets
+GET         /dialsheet/current                                  controllers.DialSheetController.getCurrentDialSheet
+GET         /dialsheet/details/:id                              controllers.DialSheetController.getDialSheetDetails(id: String)
+GET         /dialsheet/weeklyDetails                            controllers.DialSheetController.getWeeklyDialSheetDetails
+GET         /dialsheet/monthlyDetails                           controllers.DialSheetController.getMonthlyDialSheetDetails
+GET         /dialsheet/quarterlyDetails                         controllers.DialSheetController.getQuarterlyDialSheetDetails
+GET         /dialsheet/yearlyDetails                            controllers.DialSheetController.getYearlyDialSheetDetails
+GET         /dialsheet/allTimeDetails                           controllers.DialSheetController.getAllTimeDialSheetDetails
+GET         /dialsheet/past/unfulfilled                         controllers.DialSheetController.getUnfulfilledDialSheetDialCounts
+POST        /dialsheet/dials/change/today                       controllers.DialSheetController.changeDialCountForToday()
+POST        /dialsheet/dials/change/:id                         controllers.DialSheetController.changeDialCount(id: String)
+POST        /dialsheet/contact/editTime                         controllers.DialSheetController.editDialSheetContactTime()
+POST        /dialsheet/appointment/create                       controllers.DialSheetController.createDialSheetAppointment()
+POST        /dialsheet/appointment/delete/:id                   controllers.DialSheetController.deleteDialSheetAppointment(id: String)
+POST        /dialsheet/appointment/edit/:id                     controllers.DialSheetController.editDialSheetAppointment(id: String)
+
+# Misc
+GET         /suggestion                                         controllers.MiscellaneousController.getCreateSuggestionPage
+POST        /suggestion                                         controllers.MiscellaneousController.createSuggestion
+GET         /bugs                                               controllers.MiscellaneousController.getReportBugPage
+POST        /bugs                                               controllers.MiscellaneousController.createBugReport
+GET         /quote                                              controllers.MiscellaneousController.getCreateUserQuotePage
+POST        /quote                                              controllers.MiscellaneousController.createUserQuote
+
+# OAuth
+GET         /auth/accounts                                      controllers.OAuthController.getAccounts
+GET         /auth/callback/outlook                              controllers.OAuthController.loginWithOutlookCallback
+#GET         /auth/callback/google                               controllers.OAuthController.loginWithGoogleCallback
+GET         /api/auth/accounts                                  controllers.OAuthController.getAccountsAsJson
+POST        /auth/accounts/delete/:id                           controllers.OAuthController.deleteOAuthAccount(id: String)
+
+# Appointments
+GET         /appointments/upcoming                              controllers.AppointmentsController.getUpcomingUserAppointments
+GET         /appointments/past                                  controllers.AppointmentsController.getPastUserAppointments
+GET         /appointments/today                                 controllers.AppointmentsController.getAppointmentsForToday
+GET         /appointments/unfulfilled                           controllers.AppointmentsController.getRecentUnfulfilledAppointments
+GET         /appointments/export/:id                            controllers.AppointmentsController.getExportAppointmentToCalendar(id)
+POST        /appointments/export/:id                            controllers.AppointmentsController.exportAppointmentToCalendar(id)
+POST        /appointments/unlink/:providerId                    controllers.AppointmentsController.deleteLinkedProvider(providerId)
+POST        /appointments/updateStatus/:id                      controllers.AppointmentsController.setAppointmentOutcome(id)
+
+# Alerts
+GET         /alerts                                             controllers.AlertsController.getAlertsPage
+
+# Outlook
+GET         /outlook/calendar/createTemplate                    controllers.OutlookController.getCreateTemplatePage
+POST        /outlook/calendar/createTemplate                    controllers.OutlookController.createNewTemplate()
+GET         /outlook/calendar/editTemplate/:id                  controllers.OutlookController.getEditTemplatePage(id: String)
+POST        /outlook/calendar/editTemplate/:id                  controllers.OutlookController.editTemplate(id: String)
+POST        /outlook/calendar/deleteTemplate/:id                controllers.OutlookController.deleteCalendarTemplate(id)
+GET         /outlook/calendar/templates                         controllers.OutlookController.getUserTemplatesPage
+GET         /outlook/calendar/preview/:id                       controllers.OutlookController.getPreviewCalendarTemplate(id)
+POST        /outlook/calendar/preview                           controllers.OutlookController.previewCalendarTemplate
+GET         /api/outlook/calendar/templates                     controllers.OutlookController.getUserTemplates
+
+# Manager Misc
+POST        /manager/set                                        controllers.ManagerMiscController.setIsUserManager()
+GET         /manager                                            controllers.ManagerMiscController.getManagementPortalHomepage
+GET         /manager/faq                                        controllers.ManagerMiscController.getManagerFaqPage
+GET         /manager/employees                                  controllers.ManagerMiscController.getEditEmployeesPage
+GET         /manager/employees/coworkers                        controllers.ManagerMiscController.getEmployeeCoworkers
+GET         /manager/employees/search                           controllers.ManagerMiscController.getUsersFromSearch
+GET         /manager/employees/accept                           controllers.ManagerMiscController.acceptManagerRequest
+POST        /manager/employees/add/:id                          controllers.ManagerMiscController.sendEmployeeRequest(id: String)
+POST        /manager/employees/delete/:id                       controllers.ManagerMiscController.deleteEmployeeFromManager(id: String)
+
+# Manager - Comparison
+GET         /manager/employees/compare                          controllers.ManagerComparisonController.getEmployeeComparisonPage
+GET         /manager/employees/compare/:range                   controllers.ManagerComparisonController.getCompareEmployeesOverRange(range: String)
+
+# Manager - Sharing
+POST        /manager/employees/transfer                         controllers.ManagerSharingController.transferAllContacts()
+POST        /manager/employees/transferProspects                controllers.ManagerSharingController.transferProspects()
+POST        /manager/employees/transferList                     controllers.ManagerSharingController.transferList()
+
+# Manager - Dial Sheets
+GET         /manager/dialsheets                                 controllers.ManagerDialSheetController.getDialSheetHistoryPage
+GET         /manager/dialsheets/:date                           controllers.ManagerDialSheetController.getDialSheetDatePage(date: String)
+GET         /manager/dialsheets/details/:userId/:sheetId        controllers.ManagerDialSheetController.getDialSheetDetailsPage(userId: String, sheetId: String)
+
+# Manager - Candidates
+#GET         /manager/candidates                         controllers.ManagerCandidateController.getViewCandidatesPage
+#GET         /manager/candidates/file/:id                controllers.ManagerCandidateController.getViewCandidateFile(id)
+
+# User - Sharing
+POST        /user/transferProspects                             controllers.UserSharingController.transferProspects()
+POST        /user/transferList                                  controllers.UserSharingController.transferList()
+
+# User - Settings
+POST        /user/settings/change                               controllers.SettingsController.changeSettings()
+POST        /user/settings/versionRevision/dismiss              controllers.SettingsController.dismissVersionChanges()
+
+# Admin
+GET         /admin                                              controllers.AdminController.getAdminConsolePage
+GET         /admin/suggestions                                  controllers.AdminController.getSuggestionsPage
+GET         /admin/bugs                                         controllers.AdminController.getBugReportsPage
+GET         /admin/quotes                                       controllers.AdminController.getQuotesPage
+GET         /admin/user/:id                                     controllers.AdminController.getUserPage(id: String)
+GET         /admin/createMessage                                controllers.AdminController.getCreateMessagePage
+POST        /admin/createMessage                                controllers.AdminController.createMessage()
+
+# Client Revision
+GET         /client/version/windows                             controllers.ClientRevisionController.getWindowsVersionNumber
+GET         /client/version/mac                                 controllers.ClientRevisionController.getMacVersionNumber
+GET         /client/version/windows/download                    controllers.ClientRevisionController.getWindowsClient
+GET         /client/version/mac/download                        controllers.ClientRevisionController.getMacClient
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /robots.txt                                         controllers.MainController.getPublicAsset(file = "other/robots.txt")
+GET         /assets/*file                                       controllers.Assets.versioned(path="/public", file: Asset)
+GET         /subscription/assets/*file                          controllers.MainController.getSubscriptionAsset(file)

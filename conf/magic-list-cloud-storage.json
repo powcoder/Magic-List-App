@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "magic-list-165706",
+  "private_key_id": "376cede9da92482a3bed56656c6119641750c035",
+  "private_key": "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDqVLAJZjz674xI\n+pl1sBsNP+h70r8scYqVl71B7D+nuIc6Ss3u2B1Z/sXNCnNIs04Jat/XXk2/oRbJ\nXUnGqL9E2a/UUimGeqV4ucUhLzSikg1Vtatk5Ke2Ammpd+4KIsLyGZ4Qjoz50nFG\nHPmSFNZ+1j6GmGGPQL3C7FJjjmofIfIzOJ0tldjkMfFbT834wz3+F/brw+09zAae\nKb459fMImELsAs7n5/8LZpshqxv6zH6BLlzxuvFeaeBuOBvlXUmC6KyRpKgizezg\nKAiSHXuAqaE8n5dUGlSohEUNvPDoUAbZwXuGo09LaVWuKeyIOX0WxTNfY5u7GiHy\nFevMaxifAgMBAAECggEACddo+mwUqrOZIEXOF0lk275Pzf3JvxOq01iwiJL2NXAS\nHv8L2RP78eE5yAl3CSx48Gkr9BF5bQYx88x7EAVI3XZkLaPpvbJG9RrnF0j7ijfL\nOrhvh+jPqKX2Jl4QFELlxM82VdGtslVzj5NF9AdhcRcf0o+WXMUhvEOWBRby0cAd\nFQLs5S/9ytGSbGlfshkWk81jb8ofgOdcvxLQGmVRc14ELWPl1cWzc8J60F3CIvpr\nR/2rPeSnfdyzK8DNA3IKGXu/NGD1hp75pjq7MQCf0thCSN88z3mYKx8hFzNt/Ma4\nNSZn4QPRVdrK6wql7rlSQQu8g/zyke7K9YZ2SzM88QKBgQD2Hd4ZGmn89f6m4pVY\nj40FK7eu51PTYx3nbvR01QNlh6YxmXylG99DwO/G6oTZnLTR+gBV0B3fP3YTHBKm\nzg+xsrngI8Wp6BlLDV0BrD1lZyKHMAAxf3zTYAs6x6xL3kabf/9JE8XafYNWGvkS\nKJDu/HaoojYqlxA3I5XGOXa55wKBgQDzvaittKvyhc+F60SAECf0k6owEioXXffH\nBlNFscX9P/ExdzBqMJRzI8CVsCCQxZlzP+nDrJrbHjQpOX0Dfbo3aFHP6XbpbzV9\nlYgFgEKts0N461tOFj3mCbsLF+XG1dwLvIettm5RbMx0kZ+aMIhSrQW69NjAhzto\nbpHBa/YEiQKBgBKkSIJWQdjrORKi7vT6SpAts4gH9Y15YHZ7LQD8cXlrQOdY3NwU\ntGCJaKAEe3OQLxIIgaX+UYTrZaIk6jTAPugSxYl4rCwmbGQG6xiJV00q9q6OsDUP\nlwDbsX4OSbqlZ2u30jpSyRW3lA8dk+gQMoonjUVQpBGtx4ilpV6SU6/ZAoGATUqB\nKMQ4GmnQStk2GZ4F7Yq91wyLiGll3xjkYx9id1JFe7geBC5vhKt7sHvvd7kRVfiY\nelJLsNw9Ei2GtQqzeEp+Vv3jlVaMkcxPG992RXqpFLkddP+clUvUoknrtUevxZD9\nPVqyVOO5WeWrxMtLD1yKiqSF71dywUT+t2Uy2HECgYBv5b+9Z/8IRigppGwdjRg6\naikULeME/2yPRgQOEkLcyJ2r8OYmNN7ZDi17ozVJD85n9Nbk9ZGWOOLHOO7axEyK\nOac0Z8BjmyU4hLMcpc72jxzjg1OTppatf19JeBLY/PmOscWl3WKUAt3ZUK+Af2zh\np3VEFcfmIIe62jdlZsiI1w==",
+  "client_email": "magic-list-cloud-storage@magic-list-165706.iam.gserviceaccount.com",
+  "client_id": "113817951469315089201",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/magic-list-cloud-storage%40magic-list-165706.iam.gserviceaccount.com"
+}

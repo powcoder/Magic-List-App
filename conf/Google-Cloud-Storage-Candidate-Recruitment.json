@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "magic-list-165706",
+  "private_key_id": "f24b21192c562f57744ecb7b2d85660e2c4c989e",
+  "private_key": "MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDHzpS8vtHatDQ3\nesp8MNmt27Dx2m7XqxwO6qNiQXQqy9+nXpzCBF9ImVUPP5PThT9tXfej+rcqFEbN\nzY7i877oqDJYFeOUtUqwWZTdJE72cxh3gbiCtmdnrtj/Rzug0jvYwGqBr2OAcU1H\ntfWFw8LXd8nt2Y3fhFMOQ5MT6O7VNfjlfsqkaRZOFk/uIgMghBcWc8mui+RM+OM4\nAz8KeoBOxSHgO+HOslL+FMP0cUcsXSe5+DoQpKppqg8056sI8vvgEIMCU6hlNvCZ\nf7pYh5NJKXz80jxXZ+zZ0rP+F8Yni5fOhwPUbZwKJU6P0MJpBccmP21+Is9JwjxX\nx1flmBdjAgMBAAECggEALkYvuE7RNz+I4Fh10LFXmKZKopieFyCvzNyWnkjeaJLy\n50ZIM77jemLYikGFMPWpLOEYW0fTZ9FuXHeA4hrlWeiqUDAxlt0twQ3eJiEkkHsz\nbWoDm3I3HJIn+2c57hMCfT6C7Cn8d2DGLxd7F1GxLEm34HgEHYH94k3QIEpQFdyS\n6RA9yb2inFaEUySXw1A2CqpofBww+3z6ymWuuY3vtup6X+hspuXrtxIkA/peVohI\nN9/GwhLZedkxs+D2fFQRVO+q/zLdvJhJMyJFPfcHpb+fFMc4RGWy/OLCvb2NARul\nJborRy7LMZXUSkkgN0o7WUkpL78+/LgR73E3We66UQKBgQD3srhp68bD0lnGtRO6\n6VFg9dZyabtdB9AHwz/ErXybcTvBRZwoYbWhjRiZ3AfSAoJT17oOJvJkD0pVUn1r\ncs8xJEsyZHOnt8L05XEKENG4owGTnGT3BbLJ+i0f4H9NKnBUMEjXKaZ+2F9htUj9\nEBDEov9z6NM1CoTr7A5fE/HcnwKBgQDOgPLbed3a5nLiuOwYYj3r81ZY4RabcqqF\nt51OlzQuyzdiYqW4J8HaNTZnLxL1+Ynjs7D89YJy77Lit5AXOFGkDvkp6QjWa01c\nw1jtvNxQ+K3in5Hrw7EqhWpIPdbmX7J8KlBflMhbFpErOV0fthYf+ELeNd92JzzM\nD4K/5FYKvQKBgQDDmuU68DCU74Zp/xFHp3zWXw0saQbHHqZPmwa+oGoorrELnZcF\n5LN0kmH9Dt82HzkgUNni1yrPjaub2Xql4ZJxMkIX12/l4J4amx47XrDfaAqUsQqi\ncGOSUPhVlgmxvHPcaAz9rSyIOwKHvIuZHJjBUB7/P7uaxWXWkSGAP9Xd7QKBgQCq\nYmb/hCvzg5VjUGUtMVIaLusd5oq6s//S2M9omwWpXm9SNEa8DcG7A5Dhzkt8vOpz\nAD6WWRPLNc+JlR/EqOljzh7z3501Hc/1LBFiByRZgvYmOLczqoGxrecluDBqYKdq\nH5e1ZZNy5MneujQGCD11H2g85IJ+gJ1/WYTuQ75imQKBgQDVAFVQQmg2tBsc5q3T\nsaHSIpPugL8uzh/DCGFhnOhEzqdQh1FUUXTcsZUdzoWcZvtbPuFR5+dKOeK3q+N2\nReGXk9mGfHZbZSlksHodPMorpj7foa62WrSrvofAp6og0Tpg1qBcoM9wEdjc/btx\n+i5w5aatF2d6FSOvd183BYHtLQ==",
+  "client_email": "magic-list-candidate-recruitme@magic-list-165706.iam.gserviceaccount.com",
+  "client_id": "110230217269512299079",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/magic-list-candidate-recruitme%40magic-list-165706.iam.gserviceaccount.com"
+}
